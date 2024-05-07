@@ -30,10 +30,18 @@ def interpret(command)
 end
 p interpret(command)
 
+
 #* INTERSTING SOLUTIONS FORM OTHERS:
 #*
 def interpret(command)
   { '()' => 'o', '(al)' => 'al' }.each { |k, v| command.gsub!(k, v) }
   command
+end
+p interpret(command)
+
+#* WORKING...
+#* THIS WORKS IN JS NOT RUBY
+def interpret(command)
+  command.split("()").join("o").split("(al)").join("al")
 end
 p interpret(command)
